@@ -1,0 +1,28 @@
+
+<div class="container conten">
+    <h1>NEWS USER</h1>
+    {{#if model  }} 
+        {{#each model}}
+       <div class="alert alert-danger" role="alert">{{this}}</div> 
+        {{/each}}
+        {{/if}} 
+    
+    <form action="doInsert" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="txtName" id="name" class="form-control">
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="txtEmail" id="email" class="form-control">
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" name="txtPhone" id="phone" class="form-control">
+            <br>
+        </div>
+        <input type="submit" value="Insert" class="btn btn-primary">
+    </form>
+</div>

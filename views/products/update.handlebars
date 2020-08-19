@@ -1,0 +1,28 @@
+<div class="container conten">
+    
+    {{#each model}}
+    <form action="update" method="POST",enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name"></label>
+            <input type="hidden" name="txtid" id="" class="form-control" value={{_id}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="txtName" id="" class="form-control" value={{name}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" name="description" id="" class="form-control" value={{description}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input type="text" name="image" id="" class="form-control" value={{image}}>
+            <br>
+        </div>
+        <input type="submit" value="Update" class="btn btn-primary">
+    </form>
+    {{/each}}
+</div>

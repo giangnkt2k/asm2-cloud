@@ -1,0 +1,28 @@
+<div class="container conten">
+    <h1>Update</h1>
+    {{#each model}}
+    <form action="update" method="POST">
+        <div class="form-group">
+            <label for="name"></label>
+            <input type="hidden" name="txtid" id="" class="form-control" value={{_id}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="txtName" id="" class="form-control" value={{name}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="txtEmail" id="email" class="form-control"value={{email}}>
+            <br>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" name="txtPhone" id="phone" class="form-control"value={{phone}}>
+            <br>
+        </div>
+        <input type="submit" value="Update" class="btn btn-primary">
+    </form>
+    {{/each}}
+</div>
